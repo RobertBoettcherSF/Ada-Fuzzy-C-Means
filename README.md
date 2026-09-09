@@ -4,7 +4,7 @@ Educational, self-contained Ada 2023 package for
 [Wikipedia: Fuzzy clustering — Fuzzy c-means](https://en.wikipedia.org/wiki/Fuzzy_clustering#Fuzzy_c-means_clustering):
 **Fuzzy c-means (FCM)**, a form of **soft clustering** (also called soft
 *k*-means) in which each data point can belong to more than one cluster with
-graded **memberships** \(w_{ij}\in[0,1]\) that sum to 1 across clusters for
+graded **memberships** $w_{ij}\in[0,1]$ that sum to 1 across clusters for
 each point.
 
 Language: **Ada 2023** (ISO/IEC 8652:2023), compiled with GNAT (`-gnat2022`).
@@ -21,15 +21,15 @@ Fuzzy *c*-means was developed by **J.C. Dunn** (1973) and improved by
 **J.C. Bezdek** (1981).  It is one of the most widely used fuzzy clustering
 algorithms and is closely related to hard *k*-means: both minimize a sum of
 squared distances to cluster centers, but FCM allows fractional memberships
-controlled by a **fuzzifier** \(m\).
+controlled by a **fuzzifier** $m$.
 
 ## Relation to *k*-means
 
 *k*-means is the hard special case: memberships are restricted to
-\(w_{ij}\in\{0,1\}\).  FCM uses the same Euclidean / squared-Euclidean geometry
+$w_{ij}\in\{0,1\}$.  FCM uses the same Euclidean / squared-Euclidean geometry
 but replaces the crisp assignment step with a soft update.  As the fuzzifier
-\(m\to 1^+\), memberships become increasingly crisp and FCM approaches hard
-*k*-means.  Larger \(m\) yields fuzzier (more shared) partitions.
+$m\to 1^+$, memberships become increasingly crisp and FCM approaches hard
+*k*-means.  Larger $m$ yields fuzzier (more shared) partitions.
 
 ## Objective and updates
 
