@@ -54,6 +54,7 @@ w_{ij}=\left(\sum_{k=1}^{c}\left(\frac{\|\mathbf{x}_i-\mathbf{c}_j\|}{\|\mathbf{
 $$
 
 **Zero-distance guard:** if $\mathbf{x}_i = \mathbf{c}_j$, set $w_{ij} = 1$ and all other memberships for that point to 0 (numerically: squared distance $\le$ `Distance_Eps`).
+
 ### Iteration
 
 1. Choose $c$; initialize memberships randomly (seeded LCG) with row sums 1 (or initialize centers then compute $W$).
