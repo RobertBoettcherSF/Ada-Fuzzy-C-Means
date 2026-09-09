@@ -49,25 +49,20 @@ $$
 
 **Membership update** (Bezdek):
 
-\[
-w_{ij}=\Biggl(\sum_{k=1}^{c}
-\Biggl(\frac{\|\mathbf{x}_i-\mathbf{c}_j\|}{\|\mathbf{x}_i-\mathbf{c}_k\|}
-\Biggr)^{\frac{2}{m-1}}\Biggr)^{-1}
-\]
+$$
+w_{ij}=\left(\sum_{k=1}^{c}\left(\frac{\|\mathbf{x}_i-\mathbf{c}_j\|}{\|\mathbf{x}_i-\mathbf{c}_k\|}\right)^{\frac{2}{m-1}}\right)^{-1}
+$$
 
-**Zero-distance guard:** if \(\mathbf{x}_i=\mathbf{c}_j\), set \(w_{ij}=1\) and
-all other memberships for that point to 0 (numerically: squared distance
-\(\le\) `Distance_Eps`).
+**Zero-distance guard:** if $\mathbf{x}_i=\mathbf{c}_j$, set $w_{ij}=1$ and all other memberships for that point to 0 (numerically: squared distance $\le$ `Distance_Eps`).
 
 ### Iteration
 
-1. Choose \(c\); initialize memberships randomly (seeded LCG) with row sums 1
-   (or initialize centers then compute \(W\)).
-2. Update centers from \(W\).
-3. Update \(W\) from centers.
-4. Repeat until \(\max|\Delta w|<\varepsilon\) or `Max_Iters`.
+1. Choose $c$; initialize memberships randomly (seeded LCG) with row sums 1 (or initialize centers then compute $W$).
+2. Update centers from $W$.
+3. Update $W$ from centers.
+4. Repeat until $\max|\Delta w|<\varepsilon$ or `Max_Iters`.
 
-Common default: \(m=2\).  Metric in this package: Euclidean \(L_2\).
+Common default: $m=2$. Metric in this package: Euclidean ($L_2$).
 
 ## Project overview
 
