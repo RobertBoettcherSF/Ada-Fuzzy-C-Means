@@ -33,20 +33,19 @@ but replaces the crisp assignment step with a soft update.  As the fuzzifier
 
 ## Objective and updates
 
-Given observations \(\mathbf{x}_1,\ldots,\mathbf{x}_n\in\mathbb{R}^d\) and
-\(c\) clusters, FCM minimizes
+Given observations $\mathbf{x}_1,\ldots,\mathbf{x}_n\in\mathbb{R}^d$ and $c$ clusters, FCM minimizes
 
-\[
+$$
 J(W,C)=\sum_{i=1}^{n}\sum_{j=1}^{c} w_{ij}^{m}\,\|\mathbf{x}_i-\mathbf{c}_j\|^2
-\]
+$$
 
-with row-stochastic memberships \(\sum_j w_{ij}=1\), \(w_{ij}\ge 0\).
+with row-stochastic memberships $\sum_j w_{ij}=1$, $w_{ij}\ge 0$.
 
 **Centroid update** (weighted mean):
 
-\[
+$$
 \mathbf{c}_j=\frac{\sum_i w_{ij}^{m}\,\mathbf{x}_i}{\sum_i w_{ij}^{m}}
-\]
+$$
 
 **Membership update** (Bezdek):
 
