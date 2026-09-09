@@ -68,7 +68,7 @@ Common default: $m=2$. Metric in this package: Euclidean ($L_2$).
 
 | Concern | Approach | Notes |
 | --- | --- | --- |
-| **Metric** | Euclidean \(L_2\) / squared \(L_2\) | `Distance`, `Squared_Distance` |
+| **Metric** | Euclidean \($L_2\) / squared \(L_2\) | `Distance`, `Squared_Distance` |
 | **Init** | Seeded LCG random memberships | `Init_Memberships_Random` |
 | **Updates** | Bezdek center + membership | `Update_Centers`, `Update_Memberships` |
 | **Stop** | \(\max\|\Delta W\|<\varepsilon\) | or `Max_Iters` |
