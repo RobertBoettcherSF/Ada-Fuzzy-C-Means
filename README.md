@@ -68,11 +68,11 @@ Common default: $m=2$. Metric in this package: Euclidean ($L_2$).
 
 | Concern | Approach | Notes |
 | --- | --- | --- |
-| **Metric** | Euclidean \($L_2$\) / squared \(L_2\) | `Distance`, `Squared_Distance` |
+| **Metric** | Euclidean ($L_2$) / squared ($L_2$) | `Distance`, `Squared_Distance` |
 | **Init** | Seeded LCG random memberships | `Init_Memberships_Random` |
 | **Updates** | Bezdek center + membership | `Update_Centers`, `Update_Memberships` |
-| **Stop** | \(\max\|\Delta W\|<\varepsilon\) | or `Max_Iters` |
-| **Quality** | Fuzzy objective \(J\); PC | `Objective_J`, `Partition_Coefficient` |
+| **Stop** | $\max\Vert\Delta W\Vert < \varepsilon$ | or `Max_Iters` |
+| **Quality** | Fuzzy objective ($J$); PC | `Objective_J`, `Partition_Coefficient` |
 | **Hard labels** | Argmax membership | `Hard_Labels_From_Memberships` |
 | **Capacity** | Bounded arrays | `Max_Points`, `Max_Dims`, `Max_Clusters` |
 
