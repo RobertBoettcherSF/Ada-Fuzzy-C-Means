@@ -81,12 +81,12 @@ Common default: $m=2$. Metric in this package: Euclidean ($L_2$).
 | Area | Subprograms / types | Role |
 | --- | --- | --- |
 | Types | `Real`, `Point`, `Dataset`, `Centers`, `Membership_Matrix`, `Hard_Labels`, `Parameters`, `Result` | Domain + run config / outcome |
-| Geometry | `Distance`, `Squared_Distance`, `Extract_Point`, `Extract_Center` | \(L_2\) helpers |
-| Init | `Init_Memberships_Random`, `Seed_RNG`, `Draw_Unit` | Row-stochastic \(W\); LCG |
+| Geometry | `Distance`, `Squared_Distance`, `Extract_Point`, `Extract_Center` | $L_2$ helpers |
+| Init | `Init_Memberships_Random`, `Seed_RNG`, `Draw_Unit` | Row-stochastic $W$; LCG |
 | Steps | `Update_Centers`, `Update_Memberships`, `Objective_J` | One FCM iteration pieces |
 | Driver | `Run_Fuzzy_C_Means` / `Run_FCM` | Full loop → `Result` |
 | Post | `Hard_Labels_From_Memberships`, `Partition_Coefficient`, `Max_Membership_Delta` | Crisp labels; PC; convergence |
-| Errors | `Invalid_Argument`, `Capacity_Exceeded` | Bad \(m\le 1\), \(C\), shapes, caps |
+| Errors | `Invalid_Argument`, `Capacity_Exceeded` | Bad $m \le 1$, $C$, shapes, caps |
 
 `Parameters`: `C`, `Fuzzifier_M` (default 2), `Eps`, `Max_Iters`, `Seed`.
 
